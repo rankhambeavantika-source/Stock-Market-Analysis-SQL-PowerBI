@@ -422,7 +422,9 @@ The report contains **three analytical pages**, each designed for a different le
 
 **Avantika Rankhambe**
 
-📧 your.email@example.com • 💼 [LinkedIn](www.linkedin.com/in/avantika-rankhambe-746808275) • 🐙 [GitHub](https://github.com/rankhambeavantika-source)
+📧 rankhambeavantika@gmail.com
+• 💼 (www.linkedin.com/in/avantika-rankhambe-746808275) •
+🐙 (https://github.com/rankhambeavantika-source)
 
 ⭐ *If you found this project useful, give it a star!* ⭐
 
