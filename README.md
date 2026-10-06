@@ -1,203 +1,423 @@
 # 📈 Stock Market Analysis | SQL + Power BI
 
-**Turning raw stock market data into a decision-ready analytics layer for understanding stock performance, price trends, trading activity, and company-level insights.**
+![SQL](https://img.shields.io/badge/SQL-Analysis-4479A1?logo=postgresql&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&logoColor=black)
+![Excel](https://img.shields.io/badge/Excel-Validation-217346?logo=microsoftexcel&logoColor=white)
+![DAX](https://img.shields.io/badge/DAX-Measures-0078D4)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+
+> **Transforming 14,315 historical stock market records into a decision-ready analytics solution for understanding stock performance, price movements, trading activity, returns, and company-level trends.**
 
 ---
 
-## 📌 Business Problem
+## 🔗 Project Links
 
-Stock market datasets contain large volumes of historical information such as opening prices, closing prices, highest and lowest prices, daily returns, and trading volume. However, raw data alone does not provide an easy way to understand overall market performance.
-
-Investors, analysts, and business stakeholders need quick answers to questions such as:
-
-- Which companies are performing the best?
-- Which stocks are showing weaker performance?
-- Which stocks have the highest trading volume?
-- How are stock prices changing over time?
-- Which companies have higher average closing prices?
-- How does performance change across different years?
-- How does one company compare with another?
-
-**Without a proper analytics layer, identifying these patterns from raw stock market data becomes time-consuming and difficult.**
-
-I built a **SQL → Power BI analytics workflow** to transform raw stock market data into an interactive dashboard that makes these insights easier to explore and understand.
+| 📌 Resource | 🌐 Link |
+|---|---|
+| 📊 **Live Power BI Dashboard** | [View Dashboard](PASTE_POWER_BI_LINK_HERE) |
+| 🗄️ **SQL Queries** | [View SQL Script](https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI/blob/main/Share%20Market%20Analysis.sql) |
+| 📁 **Dataset** | [View Data](Data/stock_data.csv) |
+| 📥 **Power BI File (.pbix)** | [Download](https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI/blob/main/Stock%20Market%20analsysis.pbix) |
 
 ---
 
-## 🎯 What I Did
+## 📑 Table of Contents
 
-1. **Cleaned and prepared the stock market dataset** by checking data types, missing values, duplicate records, dates, and numerical fields.
-2. **Used SQL for analytical queries** to calculate average prices, highest and lowest prices, trading volume, daily returns, rankings, and historical trends.
-3. **Built a Power BI data model** and created calculated measures using DAX.
-4. **Designed an interactive Power BI dashboard** with KPI cards, trends, company comparisons, rankings, and filters.
-5. **Converted the analysis into business-friendly insights** to make stock market performance easier to understand.
+- [🔗 Project Links](#-project-links)
+- [📌 Project Overview](#-project-overview)
+- [❓ Business Problem](#-business-problem)
+- [🎯 Project Objectives](#-project-objectives)
+- [🔄 End-to-End Workflow](#-end-to-end-workflow)
+- [📊 Dataset Overview](#-dataset-overview)
+- [🧹 Data Preparation](#-data-preparation)
+- [🗄️ SQL Analysis](#️-sql-analysis)
+- [⚙️ Power Query & Data Model](#️-power-query--data-model)
+- [🧮 DAX & KPI Development](#-dax--kpi-development)
+- [🧭 Business Questions Answered](#-business-questions-answered)
+- [📊 Power BI Dashboard](#-power-bi-dashboard)
+- [🎛️ Interactive Features](#️-interactive-features)
+- [💡 Key Insights](#-key-insights)
+- [📁 Repository Structure](#-repository-structure)
+- [🚀 How to Use This Project](#-how-to-use-this-project)
+- [🛠️ Tools & Skills Demonstrated](#️-tools--skills-demonstrated)
+- [🔮 Future Enhancements](#-future-enhancements)
+- [👤 Author](#-author)
 
 ---
 
-## 📊 Impact — The Numbers
+## 📌 Project Overview
 
-The dashboard summarizes the major metrics available in the stock market dataset.
+This project analyzes historical market data for **14 stocks from 2010 to 2014** using **SQL, Excel, Power Query, DAX, and Power BI**. Raw financial data is converted into an interactive reporting solution that highlights performance patterns, company comparisons, daily returns, trading-volume concentration, and price trends over time.
 
-| **KPI** | **Value** |
+| 📌 Item | Details |
+|---|---|
+| **Domain** | Finance / Stock Market Analytics |
+| **Records** | 14,315 |
+| **Stocks** | 14 |
+| **Period** | 2010 – 2014 |
+| **Focus Areas** | Price • Return • Volume • Time Trends |
+| **Deliverable** | 3-page interactive Power BI dashboard |
+
+---
+
+## ❓ Business Problem
+
+Historical stock datasets contain opening and closing prices, daily highs and lows, trading volume, and daily returns. At thousands of rows across multiple companies and years, spotting meaningful patterns manually is slow and error-prone.
+
+A structured analytics layer is needed to answer questions such as:
+
+- 📈 Which stocks demonstrate stronger return performance?
+- 💰 Which companies have higher average closing prices?
+- 📦 Which stocks have the highest trading activity?
+- 🕒 How do closing prices change over time?
+- 🔁 Which companies generate stronger average daily returns?
+- 📅 How does performance change across years?
+- 🥧 Which stocks contribute the largest share of trading volume?
+- 🏆 Which companies rank among the top performers?
+
+**Solution:** a **SQL → Power BI analytics workflow** that prepares, analyzes, models, and visualizes the data in an interactive dashboard.
+
+---
+
+## 🎯 Project Objectives
+
+- ✅ Analyze historical stock price movements
+- ✅ Measure company-level stock performance
+- ✅ Evaluate daily return behavior
+- ✅ Compare trading volume across companies
+- ✅ Identify top-performing stocks
+- ✅ Analyze yearly price and return trends
+- ✅ Evaluate YTD stock performance
+- ✅ Compare companies using consistent financial metrics
+- ✅ Build an interactive Power BI reporting solution
+- ✅ Convert analytical results into business-friendly insights
+
+---
+
+## 🔄 End-to-End Workflow
+
+```text
+Raw Data
+   ↓
+Excel Data Validation
+   ↓
+Data Cleaning
+   ↓
+SQL Analysis
+   ↓
+Power Query Transformation
+   ↓
+Power BI Data Model
+   ↓
+DAX Measures
+   ↓
+Interactive Dashboard
+   ↓
+Business Insights
+```
+
+---
+
+## 📊 Dataset Overview
+
+| Metric | Details |
 |---|---:|
-| **Total Companies** | **[Your Value]** |
-| **Average Closing Price** | **[Your Value]** |
-| **Highest Closing Price** | **[Your Value]** |
-| **Lowest Closing Price** | **[Your Value]** |
-| **Total Trading Volume** | **[Your Value]** |
-| **Average Daily Return** | **[Your Value]** |
-| **Total Records Analyzed** | **[Your Value]** |
-| **Analysis Period** | **[Start Date – End Date]** |
+| 🧾 **Total Records** | **14,315** |
+| 🏢 **Total Stocks** | **14** |
+| 📅 **Analysis Period** | **2010 – 2014** |
+| 🔍 **Analysis Areas** | Price, Return & Volume |
+| 🧰 **Analytical Tools** | SQL, Excel, Power BI |
+| 🔧 **Transformation** | Power Query |
+| 🧮 **Calculation Layer** | DAX |
 
-> Replace the bracketed values with the exact values from your dataset/dashboard.
-
----
-
-## 📈 Where the Value Concentrates
-
-The analysis focuses on identifying where stock market activity and performance are concentrated.
-
-- **Top-performing stocks:** Identify companies with stronger daily return performance.
-- **Price performance:** Compare average, highest, and lowest closing prices across companies.
-- **Trading activity:** Identify stocks with the highest trading volumes.
-- **Price trends:** Analyze how closing prices change over time.
-- **Yearly trends:** Compare stock performance and trading activity across different years.
-- **Company comparison:** Evaluate multiple companies using consistent performance metrics.
-
-These findings help transform the dashboard from a collection of charts into a tool for understanding **where market activity is concentrated and how stock performance differs across companies.**
+**Key fields:** Date • Stock Symbol • Open • High • Low • Close • Volume • Daily Return
 
 ---
 
-## 🧭 How This Drives Business & Investment Analysis
+## 🧹 Data Preparation
 
-| **Business Question** | **Dashboard Answer** | **Decision / Insight** |
-|---|---|---|
-| Which companies show stronger performance? | Company-level performance comparison | Helps identify stronger-performing stocks |
-| Which stocks have higher returns? | Top stocks by daily return | Highlights stocks with stronger return performance |
-| Which stocks have the highest trading activity? | Trading volume analysis | Identifies highly active stocks |
-| How are prices changing over time? | Historical closing price trend | Helps understand market movement |
-| How does performance change by year? | Yearly trend analysis | Helps identify changes in market performance |
-| How does one company compare with another? | Interactive company filters | Enables direct company comparison |
+Before modeling, the dataset went through the following quality checks:
 
----
-
-## 🛠 Tools & Technologies
-
-- **SQL** — data analysis, filtering, aggregation, ranking, and analytical queries
-- **Power BI** — dashboard development, visualization, data modeling, and interactive analysis
-- **DAX** — calculated measures and KPI development
-- **Power Query** — data cleaning and transformation
-- **Excel / CSV** — supporting data preparation and analysis
-
----
-
-## 📊 Power BI Dashboard
-
-The Power BI report contains three analytical pages designed to provide different levels of stock market analysis.
-
-### 1. Executive Summary Dashboard
-
-Provides a high-level overview of stock market performance.
-
-**Key components:**
-
-- Total Companies
-- Average Closing Price
-- Highest Closing Price
-- Lowest Closing Price
-- Total Trading Volume
-- Average Daily Return
-- Stock Performance Trend
-- Top 5 Stocks by Average Daily Return
-- Trading Volume by Year
-- Trading Volume by Company
-
-### 2. Company Performance Dashboard
-
-Focuses on comparing individual companies and understanding their performance.
-
-**Key components:**
-
-- Lowest Closing Price
-- Average Daily Return
-- Average Closing Price
-- Highest Closing Price
-- Total Trading Volume
-- YTD Return
-- Company Performance Table
-- Closing Price Trend
-- Top 5 Stocks by Daily Return
-- Average Daily Return by Company
-- Trading Volume by Company
-
-### 3. Detailed Market Analysis Dashboard
-
-Provides a deeper view of stock market trends.
-
-**Key components:**
-
-- Closing Price Trend by Year
-- Trading Volume by Year
-- Top 5 Stocks by Return
-- Top 10 Stocks by YTD Return
-- Average Daily Return by Year
-- Trading Volume by Company
-
-### Interactive Filters
-
-The dashboard allows users to filter the analysis using:
-
-- **Company**
-- **Year**
-- **Month**
-
----
-
-# 📸 Dashboard Screenshots
-
-### Executive Summary Dashboard
-
-![Stock Market Executive Summary](Screenshots/dashboard-1.png)
-
-
-
-### Company Performance Dashboard
-
-![Stock Market Company Performance](Screenshots/dashboard-2.png)
-
----
-
-### Detailed Market Analysis Dashboard
-
-![Stock Market Detailed Analysis](Screenshots/dashboard-3.png)
+| ✔️ Check | Purpose |
+|---|---|
+| Duplicate records | Prevent double counting |
+| Missing values | Ensure completeness |
+| Data types | Correct numeric and date formats |
+| Date validation | Valid, continuous historical dates |
+| Numerical fields | Detect invalid or outlier values |
+| Daily return validation | Confirm return calculations |
+| Stock-symbol consistency | Avoid mismatched tickers |
+| Date-range verification | Confirm 2010–2014 coverage |
 
 ---
 
 ## 🗄️ SQL Analysis
 
-SQL was used to explore the stock market dataset and answer important analytical questions.
+SQL served as the analytical foundation and validation layer before dashboard development.
 
-The analysis includes:
+**Coverage:**
 
-- Company-wise performance
-- Average stock prices
-- Highest and lowest prices
-- Trading volume analysis
-- Daily return analysis
-- Price movement analysis
-- Company comparisons
-- Historical trend analysis
-- Top and bottom performing stocks
+- 🔢 Record counts and dataset validation
+- 📅 Date-range analysis
+- 🏢 Company-level analysis
+- 💵 Average, maximum, and minimum prices
+- 📦 Trading-volume aggregation
+- 🔁 Daily-return analysis
+- 🏆 Company rankings and top performers
+- 📈 Historical trends and yearly comparisons
 
-### Example Analytical Query
+### Example 1: Company Performance Summary
 
 ```sql
 SELECT
-    Company,
-    AVG(Close) AS Average_Close_Price,
-    MAX(High) AS Highest_Price,
-    MIN(Low) AS Lowest_Price,
-    SUM(Volume) AS Total_Trading_Volume
-FROM stock_market_data
-GROUP BY Company
-ORDER BY Average_Close_Price DESC;
+    stock_symbol,
+    AVG(close)  AS average_closing_price,
+    MAX(high)   AS highest_price,
+    MIN(low)    AS lowest_price,
+    SUM(volume) AS total_trading_volume
+FROM stock_data
+GROUP BY stock_symbol
+ORDER BY average_closing_price DESC;
+```
+
+### Example 2: Yearly Trading Volume by Stock
+
+```sql
+SELECT
+    stock_symbol,
+    EXTRACT(YEAR FROM trade_date) AS trade_year,
+    SUM(volume)                   AS yearly_volume
+FROM stock_data
+GROUP BY stock_symbol, EXTRACT(YEAR FROM trade_date)
+ORDER BY trade_year, yearly_volume DESC;
+```
+
+### Example 3: Top 5 Stocks by Average Daily Return
+
+```sql
+SELECT
+    stock_symbol,
+    AVG(daily_return) AS avg_daily_return
+FROM stock_data
+GROUP BY stock_symbol
+ORDER BY avg_daily_return DESC
+LIMIT 5;
+```
+
+> 💡 Syntax shown is PostgreSQL/MySQL style; adjust date functions and `LIMIT`/`TOP` for your SQL engine.
+
+---
+
+## ⚙️ Power Query & Data Model
+
+Power Query prepared the data for Power BI by:
+
+- 🔄 Transforming and typing fields
+- ✅ Checking data consistency
+- 🗓️ Preparing date-related fields (Year, Month)
+- 🧱 Structuring columns for analysis
+- 🔗 Supporting the Power BI data model
+
+---
+
+## 🧮 DAX & KPI Development
+
+DAX measures power the dashboard KPIs and comparisons.
+
+| 📌 KPI | Description |
+|---|---|
+| Average Closing Price | Mean closing price for the selection |
+| Highest Closing Price | Peak closing price |
+| Lowest Closing Price | Lowest closing price |
+| Average Daily Return | Mean daily return |
+| Total Trading Volume | Sum of shares traded |
+| YTD Return | Year-to-date performance |
+| Stock Rankings | Top N by return, volume, or YTD |
+| Company Comparisons | Consistent metrics across stocks |
+
+### Example DAX Measures
+
+```dax
+Avg Closing Price = AVERAGE ( stock_data[close] )
+
+Total Volume = SUM ( stock_data[volume] )
+
+Avg Daily Return = AVERAGE ( stock_data[daily_return] )
+```
+
+> 💡 Replace table and column names with those used in your model.
+
+---
+
+## 🧭 Business Questions Answered
+
+| ❓ Business Question | 🔎 Analysis Used | ✅ Value |
+|---|---|---|
+| Which stocks show stronger return performance? | Top stock return analysis | Identifies stronger performers |
+| Which companies have higher closing prices? | Average and highest close | Enables company comparison |
+| Which stocks have the highest trading activity? | Trading volume analysis | Identifies highly active stocks |
+| How are prices changing over time? | Closing price trend | Reveals historical movement |
+| How does performance change by year? | Yearly analysis | Highlights changes over time |
+| Which stocks are top performers? | Top 5 / Top 10 analysis | Supports performance comparison |
+| How does YTD performance differ? | YTD return analysis | Enables comparative analysis |
+| Who contributes the most volume? | Volume-by-stock analysis | Shows market-activity concentration |
+
+---
+
+## 📊 Power BI Dashboard
+
+The report contains **three analytical pages**, each designed for a different level of analysis.
+
+### 1️⃣ Executive Summary
+
+A high-level view of overall stock market performance.
+
+- 🎚️ Filters: Stock Symbol, Year, Month
+- 🥇 Best Performing Stock / 🥉 Worst Performing Stock
+- 📦 Highest Trading Volume
+- 💰 Highest Average Close
+- 📈 Performance Trend Over Time
+- 🏆 Top 5 Stocks by Return
+- 📊 Trading Volume by Year and by Stock
+- 🥧 Stock Distribution by Trading Volume
+- 🗓️ Analysis Period panel (2010–2014 • 14 stocks • 14,315 records)
+
+![Executive Summary Dashboard](https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI/blob/main/Executive_summary.png?raw=true)
+
+---
+
+### 2️⃣ Stock Performance Analysis
+
+Detailed company-level comparison across price, return, and volume.
+
+- 💲 KPIs: Lowest / Average / Highest Closing Price
+- 🔁 Average Daily Return and YTD Return
+- 📦 Total Trading Volume and Total Stocks
+- 📈 Stock Closing Price Trend
+- 🗂️ Company Performance Table
+- 🏆 Top 5 Stocks by Daily Return
+- 📊 Daily Return and Trading Volume by Stock
+
+![Stock Performance Analysis](https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI/blob/main/Detailed_Market_Analysis.png?raw=true)
+
+---
+
+### 3️⃣ Detailed Market Analysis
+
+Deeper time-based analysis of market behavior.
+
+- 📈 Closing Price Trend by Year
+- 📦 Trading Volume by Year
+- 🏆 Top 5 Stocks by Return
+- 🥇 Top 10 Stocks by YTD Return
+- 🔁 Average Daily Return by Year
+- 🔍 Comparative stock analysis
+
+![Detailed Market Analysis](https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI/blob/main/Stock-Performance_analysis.png?raw=true)
+
+---
+
+## 🎛️ Interactive Features
+
+| 🎚️ Filter | 🧭 What Users Can Do |
+|---|---|
+| **Stock Symbol** | Select one or compare multiple companies |
+| **Year** | Focus on a specific year |
+| **Month** | Drill into monthly behavior |
+
+Users can also watch KPIs update dynamically, explore price trends, compare daily returns, and analyze trading-volume patterns.
+
+---
+
+## 💡 Key Insights
+
+The dashboard helps users quickly identify:
+
+- 🚀 Stocks with stronger daily-return performance
+- 💰 Companies with higher average closing prices
+- 📦 Stocks with significant trading activity
+- 📉 Changes in closing prices across 2010–2014
+- ⚖️ Performance differences between companies
+- 📅 Yearly changes in trading volume
+- 🏆 Stocks consistently among top return performers
+- 🥧 Concentration of trading activity in selected stocks
+
+### 📌 Highlights from the Dashboard
+
+| 📊 Metric | 🔢 Value |
+|---|---:|
+| Lowest Closing Price | 1.05 |
+| Highest Closing Price | 691.69 |
+| YTD Return | 14.75% |
+| Total Trading Volume | ~2 Trillion shares |
+| Highest Trading Volume | AAPL |
+| Highest Average Close | NFLX (188.25) |
+| Top Stocks by Average Daily Return | GOOGL, NVDA, TSLA, INTC, AAPL |
+
+---
+
+## 📁 Repository Structure
+
+```text
+📦 Stock-Market-Analysis
+ ┣ 📂 Data
+ ┃ ┗ 📄 stock_data.csv
+ ┣ 📂 SQL
+ ┃ ┗ 📄 stock_market_analysis.sql
+ ┣ 📂 PowerBI
+ ┃ ┗ 📄 Stock_Market_Dashboard.pbix
+ ┣ 📂 Screenshots
+ ┃ ┣ 🖼️ 01_Executive_Summary.png
+ ┃ ┣ 🖼️ 02_Stock_Performance_Analysis.png
+ ┃ ┗ 🖼️ 03_Detailed_Market_Analysis.png
+ ┗ 📄 README.md
+```
+
+---
+
+## 🚀 How to Use This Project
+
+1. 📥 **Clone** the repository
+   ```bash
+   git clone https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI.git
+   ```
+2. 🗄️ **Run the SQL scripts** in the `SQL` folder against the dataset
+3. 📊 **Open** the `.pbix` file in Power BI Desktop
+4. 🔄 **Refresh** the data source path if prompted
+5. 🎛️ **Explore** using the Stock, Year, and Month filters
+
+---
+
+## 🛠️ Tools & Skills Demonstrated
+
+| 🧰 Category | Details |
+|---|---|
+| **Database / Querying** | SQL aggregation, grouping, filtering, ranking |
+| **Data Cleaning** | Excel validation, duplicate and missing-value checks |
+| **ETL** | Power Query transformations |
+| **Data Modeling** | Power BI data model, date fields |
+| **Calculations** | DAX measures and KPIs |
+| **Visualization** | Interactive multi-page dashboards |
+| **Analytics** | Trend, return, volume, and ranking analysis |
+| **Communication** | Business-friendly insight storytelling |
+
+---
+
+## 🔮 Future Enhancements
+
+- 📊 Add volatility and risk metrics (standard deviation, Sharpe ratio)
+- 📈 Add moving averages (50-day / 200-day)
+- 🔗 Add correlation analysis between stocks
+- 🔄 Extend the dataset beyond 2014
+- 🤖 Add forecasting for price and volume
+- 🌐 Publish the dashboard to Power BI Service
+
+---
+
+## 👤 Author
+
+**Avantika RAnkhambe**
+📧 rankhambeavantika@gmail.com
+💼 [LinkedIn](https://linkedin.com/in/your-profile) • 🐙 [GitHub](https://github.com/your-username)
+
+⭐ *If you found this project useful, consider giving it a star!*
