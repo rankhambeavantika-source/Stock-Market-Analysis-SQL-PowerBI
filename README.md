@@ -15,7 +15,7 @@
 
 ![Records](https://img.shields.io/badge/📊_Records-14,315-blue?style=flat-square)
 ![Stocks](https://img.shields.io/badge/🏢_Stocks-14-green?style=flat-square)
-![Period](https://img.shields.io/badge/📅_Period-2010--2014-orange?style=flat-square)
+![Period](https://img.shields.io/badge/📅_Period-2010--2023-orange?style=flat-square)
 ![Pages](https://img.shields.io/badge/🖥️_Dashboard_Pages-3-purple?style=flat-square)
 
 </div>
@@ -46,14 +46,14 @@
 
 ## 📌 Project Overview
 
-This project analyzes historical market data for **14 stocks from 2010 to 2014** using **SQL, Excel, Power Query, DAX, and Power BI**. Raw financial data is converted into an interactive reporting solution that highlights performance patterns, company comparisons, daily returns, trading-volume concentration, and price trends over time.
+This project analyzes historical market data for **14 stocks from 2010 to 2023** using **SQL, Excel, Power Query, DAX, and Power BI**. Raw financial data is converted into an interactive reporting solution that highlights performance patterns, company comparisons, daily returns, trading-volume concentration, and price trends over time.
 
 | 📌 Item | 📝 Details |
 |---|---|
 | 🏦 **Domain** | Finance / Stock Market Analytics |
 | 🧾 **Records** | 14,315 |
 | 🏢 **Stocks** | 14 |
-| 📅 **Period** | 2010 – 2014 |
+| 📅 **Period** | 2010 – 2023 |
 | 🔍 **Focus Areas** | Price • Return • Volume • Time Trends |
 | 🖥️ **Deliverable** | 3-page interactive Power BI dashboard |
 
@@ -124,7 +124,7 @@ Historical stock datasets contain opening and closing prices, daily highs and lo
 |---|---:|
 | 🧾 **Total Records** | **14,315** |
 | 🏢 **Total Stocks** | **14** |
-| 📅 **Analysis Period** | **2010 – 2014** |
+| 📅 **Analysis Period** | **2010 – 2023** |
 | 🔍 **Analysis Areas** | Price, Return & Volume |
 | 🧰 **Analytical Tools** | SQL, Excel, Power BI |
 | 🔧 **Transformation** | Power Query |
@@ -147,7 +147,7 @@ Historical stock datasets contain opening and closing prices, daily highs and lo
 | 🔢 Numerical fields | Detect invalid or outlier values |
 | 📉 Daily return validation | Confirm return calculations |
 | 🏷️ Stock-symbol consistency | Avoid mismatched tickers |
-| 🗓️ Date-range verification | Confirm 2010–2014 coverage |
+| 🗓️ Date-range verification | Confirm 2010–2023 coverage |
 
 ---
 
@@ -275,7 +275,7 @@ The report contains **three analytical pages**, each designed for a different le
 - 🏆 Top 5 Stocks by Return
 - 📊 Trading Volume by Year and by Stock
 - 🥧 Stock Distribution by Trading Volume
-- 🗓️ Analysis Period panel (2010–2014 • 14 stocks • 14,315 records)
+- 🗓️ Analysis Period panel (2010–2023 • 14 stocks • 14,315 records)
 
 <div align="center">
 
@@ -299,7 +299,7 @@ The report contains **three analytical pages**, each designed for a different le
 
 <div align="center">
 
-![Stock Performance Analysis](https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI/blob/main/Detailed_Market_Analysis.png?raw=true)
+![Stock Performance Analysis](https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI/blob/main/Share_Market_Analsysis.png?raw=true)
 
 </div>
 
@@ -318,7 +318,7 @@ The report contains **three analytical pages**, each designed for a different le
 
 <div align="center">
 
-![Detailed Market Analysis](https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI/blob/main/Stock-Performance_analysis.png?raw=true)
+![Detailed Market Analysis](https://github.com/rankhambeavantika-source/Stock-Market-Analysis-SQL-PowerBI/blob/main/Detailed_Market_Analysis.png?raw=true)
 
 </div>
 
@@ -370,7 +370,7 @@ The report contains **three analytical pages**, each designed for a different le
  ┣ 📊 Stock Market analsysis.pbix
  ┣ 🧾 Stock_Market_Raw_Data.csv
  ┣ 🖼️ Executive_summary.png
- ┣ 🖼️ Stock-Performance_analysis.png
+ ┣ 🖼️ Share_Market_Analsysis.png
  ┣ 🖼️ Detailed_Market_Analysis.png
  ┗ 📄 README.md
 ```
@@ -410,7 +410,7 @@ The report contains **three analytical pages**, each designed for a different le
 - 📊 Add volatility and risk metrics (standard deviation, Sharpe ratio)
 - 📈 Add moving averages (50-day / 200-day)
 - 🔗 Add correlation analysis between stocks
-- 🔄 Extend the dataset beyond 2014
+- 🔄 Extend the dataset beyond 2023
 - 🤖 Add forecasting for price and volume
 - 🌐 Publish the dashboard to Power BI Service
 
@@ -418,10 +418,11 @@ The report contains **three analytical pages**, each designed for a different le
 
 ## 👤 Author
 
+
+
 **Avantika Rankhambe**
-📧 rankhambeavantika@gmail.com 
-• 💼 [LinkedIn](www.linkedin.com/in/avantika-rankhambe-746808275) 
-• 🐙 [GitHub](https://github.com/rankhambeavantika-source)
+
+📧 your.email@example.com • 💼 [LinkedIn](www.linkedin.com/in/avantika-rankhambe-746808275) • 🐙 [GitHub](https://github.com/rankhambeavantika-source)
 
 ⭐ *If you found this project useful, give it a star!* ⭐
 
